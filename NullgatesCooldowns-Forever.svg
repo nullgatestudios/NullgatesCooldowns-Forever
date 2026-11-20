@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <!-- Nullgate's Cooldowns - Forever: an hourglass inside a cooldown sweep ring -->
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#232d3d"/>
+      <stop offset="1" stop-color="#0f141c"/>
+    </linearGradient>
+    <linearGradient id="gold" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f0d27a"/>
+      <stop offset="0.5" stop-color="#c9a54e"/>
+      <stop offset="1" stop-color="#8a6a26"/>
+    </linearGradient>
+    <linearGradient id="sand" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9fe2ff"/>
+      <stop offset="1" stop-color="#2f8ad6"/>
+    </linearGradient>
+    <linearGradient id="glass" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="1" stop-color="#ffffff" stop-opacity="0.05"/>
+    </linearGradient>
+    <radialGradient id="arcane" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#7ac8ff" stop-opacity="0.45"/>
+      <stop offset="1" stop-color="#2a5ac2" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="9"/>
+    </filter>
+  </defs>
+
+  <!-- frame -->
+  <rect x="20" y="20" width="472" height="472" rx="64" fill="url(#bg)"/>
+  <rect x="20" y="20" width="472" height="472" rx="64" fill="none" stroke="url(#gold)" stroke-width="16"/>
+  <rect x="44" y="44" width="424" height="424" rx="44" fill="none" stroke="#c9a54e" stroke-opacity="0.35" stroke-width="3"/>
+
+  <circle cx="256" cy="256" r="190" fill="url(#arcane)"/>
+
+  <!-- cooldown ring: dim track, bright remaining arc (about two thirds) -->
+  <circle cx="256" cy="256" r="160" fill="none" stroke="#2a3446" stroke-width="22"/>
+  <path d="M256 96 A160 160 0 1 1 117.4 336" fill="none" stroke="#4fb4ff" stroke-width="30" opacity="0.4" filter="url(#glow)"/>
+  <path d="M256 96 A160 160 0 1 1 117.4 336" fill="none" stroke="url(#sand)" stroke-width="22" stroke-linecap="round"/>
+  <!-- tick marks -->
+  <g stroke="#c9a54e" stroke-width="5" stroke-linecap="round" opacity="0.8">
+    <path d="M256 66 V80"/><path d="M446 256 H432"/><path d="M256 446 V432"/><path d="M66 256 H80"/>
+  </g>
+
+  <!-- hourglass -->
+  <rect x="186" y="150" width="140" height="18" rx="7" fill="url(#gold)" stroke="#5e4614" stroke-width="4"/>
+  <rect x="186" y="344" width="140" height="18" rx="7" fill="url(#gold)" stroke="#5e4614" stroke-width="4"/>
+  <path d="M202 168 C202 220 246 236 246 256 C246 276 202 292 202 344 L310 344 C310 292 266 276 266 256 C266 236 310 220 310 168 Z" fill="#4fb4ff" opacity="0.3" filter="url(#glow)"/>
+  <!-- sand -->
+  <path d="M220 196 C228 222 252 236 256 250 C260 236 284 222 292 196 Z" fill="url(#sand)"/>
+  <path d="M254 252 V320" stroke="#9fe2ff" stroke-width="4"/>
+  <path d="M212 342 C218 312 240 300 256 298 C272 300 294 312 300 342 Z" fill="url(#sand)"/>
+  <!-- glass -->
+  <path d="M202 168 C202 220 246 236 246 256 C246 276 202 292 202 344 L310 344 C310 292 266 276 266 256 C266 236 310 220 310 168 Z" fill="url(#glass)" stroke="#d7f3ff" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M218 180 Q222 214 238 232" fill="none" stroke="#ffffff" stroke-opacity="0.7" stroke-width="8" stroke-linecap="round"/>
+
+  <!-- sparkles -->
+  <path d="M110 92 l6 15 l15 6 l-15 6 l-6 15 l-6 -15 l-15 -6 l15 -6 Z" fill="#cfeaff"/>
+  <circle cx="420" cy="420" r="6" fill="#cfeaff"/>
+</svg>
