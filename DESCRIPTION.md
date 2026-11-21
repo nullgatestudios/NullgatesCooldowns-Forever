@@ -14,7 +14,7 @@ It's built to sit alongside the game's own Cooldown Manager. The Cooldown Manage
 - **Unknown is not ready**: players out of range or offline show as unknown, so you never count on a cooldown that might not be there.
 - **Click to request**: click a ready cooldown to whisper that player, for example "Rebirth on Bob, please".
 - **Optional chat line for you** when someone uses Rebirth or a Soulstone, saying who it went on.
-- **Simple settings**: which cooldowns and classes to show, layout, scale and the language.
+- **Simple settings**: which types of cooldown to show, whether to list your own, the Rebirth and Soulstone notice and the language.
 
 ---
 
