@@ -1,6 +1,8 @@
 # Nullgate's Cooldowns - Forever: Plan
 
-Status: planning, with no code written yet. Planned on 2026-11-20.
+Status: phases 0 to 4 built as 1.0.0-beta.1 on 2026-11-20; the in-game checks wait for testers (`/ncd check`). Planned on 2026-11-20.
+
+Built notes: 15 group cooldowns, cooldown times from the Forever client (Lay on Hands 20 min, Shield Wall 15 min, Fear Ward 3 min); Divine Shield isn't tracked (it only helps the paladin); the Rebirth/Soulstone notice is a chat line for you, not a group announcement; the list filters by type only.
 
 - **Folder:** `NullgatesCooldowns-Forever`
 - **Saved variables:** `NullgatesCooldownsDB` (per character)
@@ -17,7 +19,7 @@ Status: planning, with no code written yet. Planned on 2026-11-20.
 
 In the Cooldown Manager's lists: Rebirth, Innervate, Tranquility, Challenging Roar, Lay on Hands, Divine Intervention, Blessing of Protection, Shield Wall, Last Stand, Challenging Shout, Recklessness, Fear Ward, Power Infusion, Mana Tide Totem, Ice Block, Evasion, Vanish.
 
-Not in its lists, added by this addon: Reincarnation, Soulstone, Tranquilizing Shot, Divine Shield.
+Not in its lists, added by this addon: Reincarnation, Soulstone, Tranquilizing Shot.
 
 ## Where timers come from (best first)
 
@@ -49,7 +51,7 @@ A player out of range or offline shows as unknown, not as ready.
 
 ## Phase 3: Display
 
-- Compact group list grouped by type, filters by type and class, ready or minutes left.
+- Compact group list grouped by type, a filter per type, ready or minutes left.
 - Click a ready cooldown to whisper the player.
 
 ## Phase 4: Sync polish, announce, settings, languages, beta

@@ -9,11 +9,11 @@ It's built to sit alongside the game's own Cooldown Manager. The Cooldown Manage
 ## Features
 
 - **Group cooldown list**: every important cooldown in your party or raid, ready or with minutes left, grouped by type (resurrection, mana, defensive and utility).
-- **Uses the game's Cooldown Manager lists**, plus the cooldowns they leave out: Reincarnation, Soulstone, Tranquilizing Shot and Divine Shield.
+- **Uses the game's Cooldown Manager lists**, plus the cooldowns they leave out: Reincarnation, Soulstone and Tranquilizing Shot.
 - **Exact timers** from group members who also run the addon, including cooldowns shortened by talents. For everyone else, timers start from the casts the addon sees.
 - **Unknown is not ready**: players out of range or offline show as unknown, so you never count on a cooldown that might not be there.
 - **Click to request**: click a ready cooldown to whisper that player, for example "Rebirth on Bob, please".
-- **Optional announcement** when a key cooldown such as Rebirth or Soulstone is used.
+- **Optional chat line for you** when someone uses Rebirth or a Soulstone, saying who it went on.
 - **Simple settings**: which cooldowns and classes to show, layout, scale and the language.
 
 ---

@@ -1,6 +1,6 @@
 # Nullgate's Cooldowns - Forever
 
-> **Status: planning.** No code yet. See [PLAN.md](PLAN.md).
+> **Status: beta** (1.0.0-beta.1). Looking for groups to test it. See [CHANGELOG.md](CHANGELOG.md).
 
 **Nullgate's Cooldowns** shows your group's important cooldowns in **World of Warcraft: Forever**: who has Rebirth, Innervate, Soulstone, Lay on Hands or Shield Wall ready, and how long until the rest come back.
 
@@ -18,11 +18,11 @@ Your own cooldowns are already shown by the game's built-in Cooldown Manager, so
 
 ## Features
 
-- **Group cooldown list** for party and raid, with filters by type and class.
+- **Group cooldown list** for party and raid, with a filter for each type.
 - **Built on the game's Cooldown Manager lists**, plus the cooldowns it misses.
 - **Exact timers from players running the addon**, best guesses from what's seen for players who don't.
 - **Click to request** a cooldown by whisper.
-- **Optional announce** when a key cooldown such as Rebirth or Soulstone is used.
+- **Optional chat line for you** when someone uses Rebirth or a Soulstone, saying who it went on.
 - **Settings** in its own window or inside Nullgate's Addon Config.
 
 ---
@@ -52,6 +52,18 @@ Not released yet. Once it is:
 
 - **Nullgate's Addon Config**: one settings hub and profile manager for the whole suite.
 - **Nullgate's Raid Buffs**, **Blessings**, **Totems**, **Restock** and more.
+
+---
+
+## Development
+
+| Task | Command |
+| :--- | :--- |
+| Refresh the cooldown data after a client patch | `python tools/generate_cooldown_data.py` (reads the latest Forever build from wago.tools) |
+| Run the tests | `lua tests/run.lua`, `lua tests/smoke.lua` and `lua tests/locales.lua` |
+| Build `zips/NullgatesCooldowns-Forever-<version>.zip` | `.\package.ps1` (or `.\package.ps1 -Version 1.0.0` to set the version first) |
+
+Publishing a GitHub release uploads that version to CurseForge (`.github/workflows/curseforge.yml`); pushes only run the tests.
 
 ---
 
