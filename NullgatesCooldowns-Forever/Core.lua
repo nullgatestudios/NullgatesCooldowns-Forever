@@ -60,8 +60,10 @@ function ns.Roster()
         local _, class = UnitClass(unit)
         local reachable = UnitIsConnected(unit) and not UnitIsDeadOrGhost(unit)
         if reachable and not UnitIsUnit(unit, "player") then
+            -- Forever can return the range as secret values, which can't be tested: then it's unknown.
             local inRange, checked = UnitInRange(unit)
-            if checked and not inRange then reachable = false end
+            local secret = issecretvalue and (issecretvalue(inRange) or issecretvalue(checked))
+            if not secret and checked and not inRange then reachable = false end
         end
         local name = UnitName(unit)
         unitByName[name] = unit
