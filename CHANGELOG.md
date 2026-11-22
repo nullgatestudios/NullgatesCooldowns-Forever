@@ -2,6 +2,12 @@
 
 All notable changes to Nullgate's Cooldowns - Forever.
 
+## [1.0.0-beta.2] - 2026-11-21
+
+### Fixed
+
+- No more error when the game hides a group member's range from addons. That player is treated as in range.
+
 ## [1.0.0-beta.1] - 2026-11-20
 
 First test version, looking for groups to try it.

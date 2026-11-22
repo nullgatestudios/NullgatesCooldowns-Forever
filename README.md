@@ -1,6 +1,6 @@
 # Nullgate's Cooldowns - Forever
 
-> **Status: beta** (1.0.0-beta.1). Looking for groups to test it. See [CHANGELOG.md](CHANGELOG.md).
+> **Status: beta** (1.0.0-beta.2). Looking for groups to test it. See [CHANGELOG.md](CHANGELOG.md).
 
 **Nullgate's Cooldowns** shows your group's important cooldowns in **World of Warcraft: Forever**: who has Rebirth, Innervate, Soulstone, Lay on Hands or Shield Wall ready, and how long until the rest come back.
 
