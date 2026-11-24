@@ -31,6 +31,14 @@ function ns.Print(text)
     print("|cff00c0ffCooldowns:|r " .. tostring(text))
 end
 
+-- A player's name without any "-Realm" part. Ambiguate does most of it; the rest guards against a
+-- blanked realm ("Name-"), since character names can't contain a hyphen.
+function ns.BareName(name)
+    local n = Ambiguate and Ambiguate(name, "none") or name
+    if type(n) ~= "string" or (issecretvalue and issecretvalue(n)) then return n end
+    return n:match("^[^-]+") or n
+end
+
 function ns.Me()
     return UnitName("player")
 end
@@ -101,8 +109,7 @@ local function OnCombatLog()
     if not cd then return end
     -- A Soulstone is seen as its buff landing on the target; everything else as the cast.
     if (cd.key == "soulstone") ~= (subevent == "SPELL_AURA_APPLIED") then return end
-    local name = sourceName and (Ambiguate and Ambiguate(sourceName, "none") or sourceName)
-    Used(name, cd, destName and (Ambiguate and Ambiguate(destName, "none") or destName))
+    Used(sourceName and ns.BareName(sourceName), cd, destName and ns.BareName(destName))
 end
 
 -- --- Sharing your own cooldowns -----------------------------------------------------------
@@ -176,7 +183,7 @@ end
 local heard = {}
 local function OnAddonMessage(prefix, message, _, sender)
     if prefix ~= ns.PREFIX or not sender then return end
-    local name = Ambiguate and Ambiguate(sender, "none") or sender
+    local name = ns.BareName(sender)
     if name == ns.Me() then return end
     local remaining = ns.Tracker.Decode(message)
     if remaining then

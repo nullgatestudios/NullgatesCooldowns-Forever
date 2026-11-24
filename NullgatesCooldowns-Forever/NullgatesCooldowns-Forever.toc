@@ -2,7 +2,7 @@
 ## Title: |cff00c0ffNullgate's Cooldowns|r - |cffffd100Forever|r
 ## Notes: Your group's important cooldowns (Rebirth, Soulstone, Innervate and more), alongside the game's Cooldown Manager.
 ## Author: Nullgate Studios
-## Version: 1.0.0-beta.2
+## Version: 1.0.0-beta.3
 ## IconTexture: Interface\Icons\Spell_Nature_Reincarnation
 ## SavedVariablesPerCharacter: NullgatesCooldownsDB
 ## OptionalDeps: NullgatesAddonConfig-Forever

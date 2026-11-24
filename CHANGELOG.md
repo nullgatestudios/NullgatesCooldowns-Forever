@@ -2,6 +2,12 @@
 
 All notable changes to Nullgate's Cooldowns - Forever.
 
+## [1.0.0-beta.3] - 2026-11-24
+
+### Fixed
+
+- Ready for Forever's realm changes: if the game ever sends a player's name with an empty realm part ("Name-"), a group member's cooldowns stay matched to them.
+
 ## [1.0.0-beta.2] - 2026-11-21
 
 ### Fixed
