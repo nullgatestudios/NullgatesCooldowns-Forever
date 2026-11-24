@@ -189,6 +189,12 @@ OK(ns.Tracker.state.Leafy == nil, "a player who leaves is forgotten")
 SlashCmdList.NULLGATESCOOLDOWNS("config")
 OK(NullgatesCooldownsOptions and NullgatesCooldownsOptions.shown, "/ncd config opens the settings")
 SlashCmdList.NULLGATESCOOLDOWNS("check")
+do -- the report window every Nullgate addon shares
+    local w = NullgateReportWindow
+    OK(w and w.shown and w.url == "https://nullgatestudios.com/report?addon=cooldowns", "check opens the shared report window with this addon's link")
+    OK(w and w.text and w.text:find("Addon: cooldowns\nNullgate's Cooldowns - Forever ", 1, true) == 1, "the report starts with the addon's slug and name")
+    OK(w and w.box.text == w.text and w.link.text == w.url, "the report and the link are in the window, ready to copy")
+end
 local log = table.concat(db.check or {}, "\n")
 OK(log:find("CombatLogGetCurrentEventInfo=yes", 1, true), "check reports which calls exist")
 OK(log:find("your cooldowns (as reported to others): fearward=", 1, true), "check reports our own cooldowns")

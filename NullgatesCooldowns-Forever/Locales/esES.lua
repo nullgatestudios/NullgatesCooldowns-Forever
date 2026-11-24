@@ -2,6 +2,10 @@
 local _, ns = ...
 
 ns.RegisterLanguagePack("esES", "Español", {
+    ["Bug report"] = "Informe de error",
+    ["Select all"] = "Seleccionar todo",
+    ["Press Ctrl+C to copy this report, then paste it into a new report at the link below, with a few words on what happened."] = "Pulsa Ctrl+C para copiar este informe y pégalo en un informe nuevo en el enlace de abajo, con unas palabras sobre lo que pasó.",
+    ["Select link"] = "Seleccionar enlace",
     ["%s on %s, please."] = "%s a %s, por favor.",
     ["%s used %s%s."] = "%s ha usado %s%s.",
     ["Automatic (game language)"] = "Automático (idioma del juego)",
